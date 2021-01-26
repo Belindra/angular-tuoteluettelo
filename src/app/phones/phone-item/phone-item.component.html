@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="images">
+    <img style="padding: 10px;" src="{{ phoneItem.images[0] }}" />
+    <div class="text">
+      <h2 style="margin: 20px;">{{ phoneItem.name }}</h2>
+      <hr style="margin: 20px;" />
+      <p style="margin: 20px;">{{ phoneItem.description }}</p>
+    
+    <div class="grid-container">
+      <ul *ngFor="let image of phoneItem.images">
+        <img class="small-image" src="{{ image }}" />
+      </ul>
+    </div>
+  </div>
+  </div>
+
+  <div class="text-wrap" style="margin-top: 30px;">
+    <div class="container-text">
+      <h5><strong>Availability and Networks</strong></h5>
+      <p>{{ phoneItem.availability }}</p>
+      <h6>Battery</h6>
+      <p><strong>Type</strong></p>
+      <p>{{ phoneItem.battery.type }}</p>
+      <p><strong>Talk Time</strong></p>
+      <p>{{ phoneItem.battery.talkTime }}</p>
+      <p><strong>Standby time (max)</strong></p>
+      <p>{{ phoneItem.battery.standbyTime }}</p>
+    </div>
+
+    <div class="container-text">
+      <h5><strong>Storage and Memory</strong></h5>
+      <p><strong>RAM</strong></p>
+      <p>{{ phoneItem.storage.ram }}</p>
+      <p><strong>Internal Storage</strong></p>
+      <p>{{ phoneItem.storage.flash }}</p>
+    </div>
+
+    <div class="container-text">
+      <h5><strong>Connectivity</strong></h5>
+      <p><strong>Network Support</strong></p>
+      <p><strong>Wifi</strong></p>
+      <p>{{ phoneItem.connectivity.wifi }}</p>
+      <p><strong>Bluetooth</strong></p>
+      <p>{{ phoneItem.connectivity.bluetooth }}</p>
+      <p><strong>Infrared</strong></p>
+      <p><i class="fa fa-times"></i></p>
+      <p><strong>GPS</strong></p>
+      <p><i class="fa fa-check"></i></p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="form-group">
+  <div class="container">
+    <p>Search:</p>
+    <input type="text" [(ngModel)]="filterTerm" />
+    <p>Sort by:</p>
+    <select (change)="selectChangeHandler($event)">
+      <option *ngFor="let sort of sorts" value="{{ sort }}">{{ sort }}</option>
+    </select>
+    <ul *ngFor="let phone of arrPhones | filter: filterTerm">
+      <div class="info">
+        <img src="{{ phone.imageUrl }}" />
+        <a routerLink="/phones/{{ phone.id }}">{{ phone.name }}</a>
+        <div class="snippet">
+          {{ phone.snippet }}
+        </div>
+      </div>
+    </ul>
+  </div>
+</div>

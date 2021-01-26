@@ -1,0 +1,15 @@
+.small-image {
+    height: 120px;
+    width: 120px;
+    border: solid black;
+    padding: 10px;
+}
+
+.images, .grid-container, .text-wrap {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.container-text {
+    font-size: 0.9rem;
+}
